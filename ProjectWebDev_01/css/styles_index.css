@@ -1,9 +1,30 @@
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 header {
     background-color: #f5f5f5;
+}
+
+.logo-icons {
+    height: 80px;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+.fa-magnifying-glass {
+    padding-right: 20px;
+}
+
+.fa-magnifying-glass, .fa-user {
+    text-align: right;
+}
+
+.menu {
+    color: #a4a3a3;
 }

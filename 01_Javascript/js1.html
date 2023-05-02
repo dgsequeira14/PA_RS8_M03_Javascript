@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Exemplo 1</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <script>
+        var nome1 = "David";
+        let nome2 = "Sequeira";     // declarar variável
+
+        let localidade;     // undefined
+        localidade="Lordelo";
+
+        localidade = 12;
+        console.log(localidade);
+        console.log(typeof localidade);
+
+        let tamanho = nome2.length;     // 8
+        console.log(tamanho);
+
+        for (let pos = 0; pos < nome2.length; pos++) {
+            // console.log(nome2[pos]);
+            console.log(nome2.charAt(pos));     // preferível
+        }
+
+        let pos2 = 0;
+        while (pos2<nome2.length) {
+            console.log(nome2.charAt(pos2));
+            pos2++;
+        }
+
+        for (let letra of nome2) {
+            console.log(letra);
+        }
+
+        // Mostrar as letras da variavel nome2 por ordem inversa
+        
+        let inversa = "";
+        for (let pos = nome1.length; pos >= 0; pos--) {
+            inversa+= nome1.charAt(pos)
+            // inversa = inversa + nome2.charAt(pos);
+        }
+
+        console.log(inversa);
+
+    </script>
+</body>
+</html>
