@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Exemplo 2</title>
+</head>
+<body>
+
+    <script>
+        // nome das variáveis
+        // letras, algarismos e símbolos $ e _
+        $="teste";
+
+        // não pode começar por um algarismo
+        // 1nome - não é permitido
+        // os nomes são case-sensitive - Total é diferente de total e de ToTaL
+        //evitar utilizar caractéres acentuados (ã, ó) e ç
+
+        // strNome, intTotal
+
+        // camel Casing - totalProdutos
+        // snake casing - total_produtos
+
+        const PI = 3.1415
+        console.log(PI);
+        // PI=564;  // assignment to constant variable
+        
+
+        // Mostrar os números pares (um por linha) até 10 na consola
+
+        const numero0 = 2;
+        for (let par = 1; par <= 10; par++) {
+            // = - assignment - atribuir um valor a uma variável
+            // == - compara valores - "1" == "1" - true
+            // === - compara valores e tipos de dados - "1" === 1 - false
+            
+            if  (par % 2 === 0) {
+                console.log(par)
+            }
+        }
+
+        for (let i=2; i<=10; i+=2 ) {
+            console.log(i);
+        }
+
+        // library Math - built-in object
+        let numeroMaior = Math.max(19,23,12,9,-3,34);
+        console.warn(numeroMaior);
+
+        let numeroMenor = Math.min(19,23,12,9,-3,34);
+        console.error(numeroMenor);
+
+        let raizQuadrada = Math.sqrt(9);
+        console.log(raizQuadrada);
+
+        let potencia1 = Math.pow(3,2);
+        console.log(potencia1);
+        
+        let potencia2 = 3**2;
+        console.log(potencia2);
+        
+        
+        let a = 0.34;
+        let b = 0.49;
+        let soma = a+ b;    // 0.8300000000000001
+        console.log(soma);
+
+        let soma1 = (a*100+b*100)/100; // 0.83
+        console.log(soma1);
+
+        let soma2 = (a + b).toFixed(2); // string!
+        console.log(soma2);
+
+        let numero=12.34;
+        console.log(Math.floor(numero));
+        console.log(Math.ceil(numero));
+        console.log(Math.round(numero));
+
+
+
+
+    </script>
+    
+</body>
+</html>

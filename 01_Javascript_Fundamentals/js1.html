@@ -38,13 +38,29 @@
 
         // Mostrar as letras da variavel nome2 por ordem inversa
         
-        let inversa = "";
-        for (let pos = nome1.length; pos >= 0; pos--) {
-            inversa+= nome1.charAt(pos)
-            // inversa = inversa + nome2.charAt(pos);
-        }
-
         console.log(inversa);
+
+        let inversa="";
+        for (let pos=nome2.length-1; pos>=0; pos--) {
+            inversa+=nome2.charAt(pos);
+            // inversa=inversa+nome2.charAt(pos);
+        }
+        console.log(inversa);
+​
+        let inversa2="";
+        for (let pos=0; pos<nome2.length; pos++) {
+            inversa2=nome2.charAt(pos)+inversa2;
+        }
+        console.log(inversa2);
+​
+        let inversa3="";
+        for (let letra of nome2) {
+            inversa3=letra+inversa3;
+        }
+        console.log(inversa3);
+​
+        let inversa4=nome2.split("").reverse().join("");
+        console.log(inversa4);
 
     </script>
 </body>
