@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Exemplo 3</title>
+  </head>
+  <body>
+    <script>
+      let primeiroNome = "David";
+      let ultimoNome = "Sequeira";
+
+      // Concatenação -> + operador de concatenação
+      let nome = primeiroNome + " " + ultimoNome;
+      console.log(nome);
+
+      let total1 = 2 + 6 + "7";
+      console.log(total1);
+
+      let total2 = "2" + 6 + 7;
+      console.log(total2);
+
+      let total3 = 2 + "6" + 7;
+      console.log(total3);
+
+      // conversão explícita
+      // Number - built-in object
+      let total4 = 2 + 6 + Number("7");
+      console.log(total4);
+
+      // parseInt - apenas para números inteiros
+      let total5 = 2 + 6 + parseInt("7");
+      console.log(total5);
+
+      let outro = "7";
+      let total6 = 2 + 6 + +outro;
+      console.log(total6);
+
+      // Template strings
+
+      let nome2 = `primeiroNome ultimoNome`;
+      console.log(nome2);
+
+      let outroNome = "António Figueiredo";
+      let ultimoCaracter = outroNome[outroNome.length - 1];
+      console.log(ultimoCaracter);
+
+      let ultimoCaracter2 = outroNome.charAt(outroNome.length - 1);
+      console.log(ultimoCaracter2);
+
+      // indexOf retorna a primeira posição numérica em que ocorre o caractere
+      let posicao = outroNome.indexOf("o");
+      console.log(posicao);
+
+      // caso não encontre retorna -1
+      let posicao2 = outroNome.indexOf("z");
+      console.log(posicao2);
+
+      let posicao3 = outroNome.lastIndexOf("o");
+      console.log(posicao3);
+
+      // contar o número de vezes que uma letra ocorre numa string
+      let letra = "o"; // 2 ocorrências
+      let letra2 = "f"; // 1 ocorrência
+
+      let totalOcorrencias = 0;
+      for (let i = 0; i < outroNome.length; i++) {
+        if (outroNome.charAt(i) === letra) {
+          totalOcorrencias++;
+        }
+      }
+      console.log(
+        `Total de ocorrências para a letra ${letra} é: ${totalOcorrencias}`
+      );
+
+      let totalOcorrencias2 = 0;
+      for (let i = 0; i < outroNome.length; i++) {
+        if (outroNome.charAt(i).toUpperCase() === letra2.toUpperCase()) {
+          totalOcorrencias2++;
+        }
+      }
+      console.log(
+        `Total de ocorrências para a letra ${letra2} é: ${totalOcorrencias2}`
+      );
+
+      console.log(outroNome.startsWith("o"));
+      console.log(outroNome.slice(0, 1) === "o");
+
+      // ===============================
+      // Extrair porções de uma string
+
+      // deprecated
+      console.log(outroNome.substr(0, 4));
+
+      console.log(outroNome.slice(2, 5));
+      console.log(outroNome.slice(5));
+      console.log(outroNome.slice(5));
+      console.log(outroNome.slice(-5));
+
+      // =========================================
+      // RegEx
+
+      let stringTeste = "Pedro Remoaldo1";
+      let re = /^[A-Za-z ]*$/;
+
+      if (re.test(stringTeste)) {
+        console.log("Nome com caractéres válidos!");
+      } else {
+        console.log("Nome com caractéres inválidos!");
+      }
+
+      // sem regEx determinar se a string de teste tem ou não caracteres válidos
+
+      function validaString2(stringTeste) {
+        let valido = true;
+        let caracteresPermitidos =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+        for (let letra of stringTeste) {
+          if (!caracteresPermitidos.includes(letra)) {
+            valido = false;
+            break;
+          }
+        }
+        if (valido) {
+          console.log("Nome com caracteres válidos!");
+        } else {
+          console.log("Nome com caracteres inválidos!");
+        }
+      }
+
+      function validaString(stringTeste)
+      {
+            let valido = true;
+            // A-Z - 65-90
+            // a-z - 97-122
+            // espaço - 32
+            let codigo = letra.charCodeAt(0);
+            for (let letra of stringTeste)
+            {
+                if (!((codigo >= 65 && codigo <= 90) ||
+                (codigo >= 97 && codigo <= 122) ||
+                codigo === 32))  {
+                    valido = false;
+                    break;
+                }
+                if (valido) {
+                console.log("Nome com caracteres válidos!");
+                } else {
+                console.log("Nome com caracteres inválidos!");
+                }
+
+            }
+        }
+
+        validaString("David");
+        validaString("Salvador1");
+
+        // Criar uma função que convert uma string para minusculas sem utilizar o método toLowerCase()
+
+        function converterParaMinusculas(stringConverter) {
+            let stringConvertida = "";
+            for (let letra of stringConverter) {
+                let codigo = letra.charCodeAt(0);
+                if (codigo >= 65 && codigo <=90) {
+                    let novoCodigo = codigo + 32;
+                    let novaLetra = String.fromCharCode(novoCodigo);
+                    stringConvertida += novaLetra;
+                } else {
+                    stringConvertida += letra;
+                } 
+            }
+
+            return stringConvertida;
+        }
+
+        console.log(converterParaMinusculas("DaviD SEquEiRA"));
+        console.log(converterParaMinusculas("David SEQUEIRA 1234$"));
+    </script>
+  </body>
+</html>
