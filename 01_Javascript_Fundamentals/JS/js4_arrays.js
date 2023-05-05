@@ -42,3 +42,15 @@ console.log(min);
 console.log(mean.toFixed(2));
 
 
+// array multidimensionais
+let dados = [
+    ["Pedro", "Ermesinde", [919999999, 929999999]],
+    ["Andreia", "Valongo"],
+    ["José", "Esposende"],
+];
+
+console.log(dados[0][1]);
+console.log(dados[0][2][0]);
+dados.push(["Ruben", "Gaia"]);
+console.table(dados);
+console.log(dados[0]);
