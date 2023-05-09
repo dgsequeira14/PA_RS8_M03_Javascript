@@ -54,3 +54,91 @@ console.log(dados[0][2][0]);
 dados.push(["Ruben", "Gaia"]);
 console.table(dados);
 console.log(dados[0]);
+
+// literal object
+let formador = {
+    nome: "David Sequeira",
+    localidade: "Guimarães",
+    pais: "Portugal",
+    contactos: {
+        telefones: [99999999, 999999999],
+        email: "ds@email.com"
+    }
+}
+
+// let formando1 = {}
+
+console.log(formador.nome);
+console.log(formador["nome"]);
+console.log(formador.contactos.telefones[1]);
+
+let chave = "pais";
+console.log(formador.chave); // undefined
+console.log(formador[chave]); // Portugal
+
+// array de objetos
+let pessoas = [
+    {nome: "Pedro Remoaldo", localidade: "Ermesinde"},
+    {nome: "Andreia", localidade: "Valongo"},
+    {nome: "José", localidade: "Esposende"},
+    {nome: "Pedro Leite", localidade: "Gaia", idade: 25},
+    {nome: "Luisa Todi", localidade: "Ermesinde"},
+]
+
+console.log(pessoas[0]);
+console.log(pessoas[3].nome);
+
+// criar uma função que lista as pessoas que moram numa localidade que é passada como parâmetro
+// method signature
+
+function filtraPorLocalidade (localidade) {
+    let resultado = [];
+    for (let pessoa of pessoas) {
+        if (pessoa.localidade === localidade) {
+            resultado.push(pessoa)
+        }
+    }
+    return resultado;
+    // return pessoas.filter(pessoa => pessoa.localidade === localidade);
+
+}
+console.log(filtraPorLocalidade("Ermesinde"));
+
+// Função que mostra os nomes das pessoas que moram em Ermesinde, cujo nome comece por L
+
+function filtraPorLocalidadeENome (localidade, inicial) {
+    let resultado = [];
+
+    for (let pessoa of pessoas) {
+        if (pessoa.localidade === localidade && pessoa.nome.startsWith(inicial)) {
+            resultado.push(pessoa)
+        }
+    }
+    return resultado;
+}
+
+console.log(filtraPorLocalidadeENome("Ermesinde", "L"));
+
+
+const formandos = ["Gonçalo", "Cleiber", "Pedro", "David"];
+// formandos = ["Gonçalo", "Cleiber", "Pedro", "David", "Rúben"];  // Assignment to constant variable -> ERRO!
+formandos.push("Rúben");    // acrescenta ao fim do array
+formandos.unshift("Rúben");    // acrescenta ao início do array
+console.log(formandos);
+
+formandos.splice(3, 0, "Hugo");     // formandos.slice(posição_inserção, 0, valor(es) a inserir)    
+
+console.log(formandos);
+
+// remover elementos
+let elementosRemovidos = formandos.splice(4,2);
+console.log(formandos);
+console.log(elementosRemovidos);
+
+// alterar elementos
+let elementosAlterados = formandos.splice(4, 1, "David");
+console.log(formandos);
+console.log(elementosAlterados);
+
+
+

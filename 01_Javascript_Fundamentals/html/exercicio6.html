@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Resolução</title>
+</head>
+<body>
+
+    <script>
+        
+        // Calcular os números primos entre 1 e um número definido por uma variável:
+        // let limite=30;
+        // Neste caso, seriam calculados os números primos entre 1 e 30.
+        // Um número primo apenas é divisível por 1 e por si próprio
+        
+        let limite = 30;
+        for (let numero = 1; numero <= 30; numero++) {
+            let divisores = 0;
+            for (let j =1; j < numero; j++) {
+                if (numero % j === 0) {
+                    divisores++;
+                    if (divisores > 1) {
+                        break;
+                    }
+                }
+            }
+            if (divisores > 1) {
+                console.log(`O número ${numero} não é primo.`);
+            }
+            else {
+                console.log(`O número ${numero} é primo.`);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -72,6 +72,34 @@ header {
 
 /* BANNER */
 
+
+.banner {
+  position: relative;
+  max-width: 1400px;
+}
+
+.img-banner {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+}
+
+.container-computer {
+  max-width: 1400px;
+}
+
+.computer {
+  margin-right: 120px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.banner-text {
+  position: absolute;
+}
+
+
 /* MISSÃO */
 
 .mission {
