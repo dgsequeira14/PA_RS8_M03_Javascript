@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - DOM 1</title>
+    <style>
+        .destaque {
+            color: red;
+            background-color: cyan;
+        }
+
+        #conteudoCollapse {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            /* margin-top: -16px; */
+            margin-top: 0;
+            display: none;
+        }
+
+        #parButton {
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Teste de DOM</h1>
+    <p id="conteudo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit, dolores beatae aut ut eaque autem vitae vero animi placeat distinctio
+        optio et accusamus dolor culpa harum fugit. Vero, porro labore.</p>
+        
+    <!-- <p><button id="btMudaTexto" type="button" onclick="...">Muda Texto</button></p> NÃO SE USA! --> 
+    <p><button id="btMudaTexto" type="button">Muda Texto</button></p>
+
+    <p id="parButton"><button id="btCollapse" type="button">Mostra Collapse</button></p>
+    <p id="conteudoCollapse">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit, dolores beatae aut ut eaque autem vitae vero animi placeat distinctio
+        optio et accusamus dolor culpa harum fugit. Vero, porro labore.</p>
+    
+    
+
+    
+    <script src="../JS/dom1.js"></script>
+
+</body>
+
+</html>

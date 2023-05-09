@@ -72,31 +72,16 @@ header {
 
 /* BANNER */
 
-
-.banner {
-  position: relative;
-  max-width: 1400px;
-}
-
-.img-banner {
+#banner {
   height: 500px;
-  width: 100%;
-  position: absolute;
+  background-image: url(../assests/imagens/fundoBanner.jpg);
+  position: relative;
 }
 
-.container-computer {
-  max-width: 1400px;
-}
-
-.computer {
-  margin-right: 120px;
+#computador {
   position: absolute;
+  bottom: -40px;
   right: 40px;
-  bottom: 40px;
-}
-
-.banner-text {
-  position: absolute;
 }
 
 
