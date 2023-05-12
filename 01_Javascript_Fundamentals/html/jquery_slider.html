@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <style>
+        .bx-wrapper {
+            width: 768px;
+            margin: auto;
+        }
+        .bx-wrapper .bx-caption{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="slider">
+        <div><img src="../assets/img/galeria1.jpg" title="Lago"></div>
+        <div><img src="../assets/img/galeria2.jpg" title="Montanha"></div>
+        <div><img src="../assets/img/galeria3.jpg" title="Barco"></div>
+        <div><img src="../assets/img/galeria4.jpg" title="Vulcão"></div>
+        <div><img src="../assets/img/galeria5.jpg" title="Fim do dia"></div>
+        <div><img src="../assets/img/galeria6.jpg" title="Pôr-do-sol"></div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <script>
+        $(".slider").bxSlider({
+            captions:true,
+            mode:"fade"
+        });
+    </script>
+</body>
+</html>
