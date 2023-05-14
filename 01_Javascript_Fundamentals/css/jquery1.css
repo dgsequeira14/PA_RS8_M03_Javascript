@@ -1,0 +1,37 @@
+#accordion {
+    width: 300px;
+}
+
+#accordion > h2 { /* > - child selector */
+     background-color: black;
+     color: white;
+     margin: 0;
+     padding: 10px 20px;
+     cursor: pointer;
+     user-select: none;   
+}
+
+#accordion > section {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#accordion > section:not(:first-of-type) {  /* pseudo-classes */
+    display: none;
+}
+
+/* #accordion > h2 {
+    position: relative;
+}
+
+#accordion > h2  > i {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+} */
+
+#accordion > h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
