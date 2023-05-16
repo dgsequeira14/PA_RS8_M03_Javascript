@@ -72,14 +72,4 @@ let pessoas=[
     // apagar a primeira pessoa que vive em Lisboa -> porque o findIndex pára a procura quando encontra um elemento
     const indexPessoa=pessoas.findIndex(pessoa => pessoa.localidade==="Lisboa");
     const arrayFinal=pessoas.splice(indexPessoa,1);
-    console.log(pessoas);
-    
-    // quem foi a última pessoa a ser inserida no array e vive em Lisboa
-    let ultimaPessoa=[...pessoas].reverse().find(pessoa => pessoa.localidade==="Lisboa").nome;
-    console.log(ultimaPessoa);
-
-
-    let ultimaLisboeta=pessoas.findLast(pessoa => pessoa.localidade==="Lisboa").nome;
-    console.log(ultimaLisboeta);
-
-    
+    console.log(pessoas); 
