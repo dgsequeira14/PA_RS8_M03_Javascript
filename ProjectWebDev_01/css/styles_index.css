@@ -5,8 +5,7 @@ body {
   font-weight: 400;
   font-style: normal;
   max-width: 1400px;
-  margin: 0 auto !important;
-  float: none !important;
+  margin: 0 auto
 }
 
 hr {
@@ -31,6 +30,7 @@ header {
 .logo-icons {
   height: 80px;
   align-items: center;
+  cursor: pointer;
 }
 
 .logo {
@@ -51,6 +51,7 @@ header {
   padding-bottom: 10px;
   font-weight: 700;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
 .options:hover {
@@ -69,19 +70,98 @@ header {
 }
 
 
-
 /* BANNER */
 
 #banner {
-  height: 500px;
-  background-image: url(../assests/imagens/fundoBanner.jpg);
+  width: 100%;
   position: relative;
 }
 
-#computador {
+#container-banner {
+  position: relative;
+}
+
+.img-banner {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.computer {
   position: absolute;
   bottom: -40px;
   right: 40px;
+}
+
+.text-banner {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  line-height: 300%;
+}
+
+#tech {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#primavera {
+  font-size: 30px;
+  color:#ccc
+}
+
+#digital {
+  font-size: 20px;
+  font-style: italic;
+  color: #fff
+}
+
+#button-info {
+  line-height: 600%;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 10px;
+  color: #f5f5f5;
+  background-color: #f16248;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#button-info:hover {
+  background-color: #c8c8c8;
+  color: #252525
+}
+
+@media screen and (max-width: 1100px) {
+  .computer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #banner {
+    text-align: center;
+  }
+
+  .img-banner {
+    height: 320px;
+  }
+
+  #tech {
+    font-size: 40px;
+  }
+  
+  #primavera {
+    font-size: 24px;
+  }
+  
+  #digital {
+    font-size: 20px;
+    font-style: italic;
+    color: #fff
+  }
+
 }
 
 
@@ -103,7 +183,6 @@ header {
 }
 
 .mission-paragraph {
-    padding-left: 20px;
     text-align: justify;
 }
 .mission-subtitle {
@@ -143,6 +222,7 @@ header {
     }
 }
 
+
 /* EQUIPA */
 
 .name {
@@ -164,23 +244,23 @@ header {
 .img1 .img-team {
     width: 300px; 
     height: auto;
-    transition: transform 0.3s;
+    display: flex;
 }
   
 .img1 .name-job {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px;
     opacity: 0;
-    transition: opacity 0.3s;
 }
   
-.img1:hover .img-team {
-    transform: scale(1.1);
+.img1:hover {
+  border-radius: 0;
 }
   
 .img1:hover .name-job {
@@ -200,14 +280,10 @@ header {
 }
   
 
-
-
-
 /* OFERTA FORMATIVA */
 
 .education {
   position: relative;
-  align-items: center;
 }
 
 .slider {
@@ -230,7 +306,7 @@ header {
 
 .title {
   color: #f27f29;
-  font-size: 42px;
+  font-size: 2.65em;
   font-weight: 700;
 }
 
@@ -246,6 +322,72 @@ header {
   margin-top: 20px;;
 }
 
+
+/* ASIDE */
+
+#contact {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 20%;
+  right: 0;
+  cursor: pointer;
+}
+
+#phone-container {
+  background-color: #252525;
+}
+
+#phone {
+  padding: 15px;
+  margin: 0;
+}
+
+#phone::before {
+  background-color: #252525;
+}
+
+#phone-number {
+  background-color: #252525;
+  color: #0acb84;
+  padding: 18.5px;
+  display: none;
+  margin: 0;
+}
+
+#phone-container:hover + #phone-number {
+  display: block;
+}
+
+#top {
+  position: fixed;
+  text-align: right;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {  /* 412px foi a resoluão maior que encontrei para um smartphone usando device toolbar no Dev Tools*/
+  #contact, #top {
+    display: none;
+  }
+
+    /* Smartphones (portrait and landscape) ----------- encontrei este bloco de código para concretizar media queries para smartphones
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+    }
+
+    Smartphones (landscape) -----------
+    @media only screen
+    and (min-width : 321px) {
+    }
+
+    Smartphones (portrait) -----------
+    @media only screen
+    and (max-width : 320px) {
+    } */
+} 
 
 /* FOOTER */
 
@@ -265,6 +407,7 @@ footer {
 
 .footer-ul {
   flex-basis: 20%;
+  cursor: pointer;
 }
 
 .footer-link {
