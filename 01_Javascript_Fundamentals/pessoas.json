@@ -1,0 +1,19 @@
+{
+    "pessoas": [
+        {
+            "id": 1,
+            "cc": 123456789,
+            "nome": "Joana",
+            "localidade": "Vila do Conde",
+            "idade": 27
+        },
+        {
+            "id": 2,
+            "cc": 342123145,
+            "nome": "Adriano",
+            "localidade": "Porto",
+            "idade": 23
+        }
+    ],
+    "paises": ["Portugal","França"]
+}
