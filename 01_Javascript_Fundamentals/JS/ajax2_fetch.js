@@ -77,7 +77,6 @@ document.querySelector("#btMostra").addEventListener("click", function () {
     })
   
 
-
 function processaPesquisa() {
   let valorPesquisa = document.querySelector("#pesquisa").value;
   // console.log(valorPesquisa);
