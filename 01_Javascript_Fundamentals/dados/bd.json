@@ -1,0 +1,19 @@
+{
+  "perfumes": [
+    {
+      "id": 1,
+      "marca": "Devota & Lomba",
+      "nome": "Mar de Rosas",
+      "preco": 11.9,
+      "destaque": false
+    },
+
+    {
+      "id": 2,
+      "marca": "Clarins",
+      "nome": "My Clarins Removam Leite Micelar",
+      "preco": 10.94,
+      "destaque": true
+    }
+  ]
+}

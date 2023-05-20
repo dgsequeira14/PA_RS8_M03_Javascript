@@ -5,21 +5,20 @@ body {
   font-weight: 400;
   font-style: normal;
   max-width: 1400px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 hr {
-    background-color: #7d7d7d;
-    height: 2px;
+  background-color: #7d7d7d;
+  height: 2px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #3C368C;
-    text-align: center;
-    margin: 20px;
+  font-size: 2.5rem;
+  color: #3c368c;
+  text-align: center;
+  margin: 20px;
 }
-
 
 /* HEADER */
 
@@ -33,16 +32,24 @@ header {
   cursor: pointer;
 }
 
-.logo {
+.logo-icons img {
+  text-align: left;
+  padding-top: 20px;
   padding-left: 20px;
 }
 
-.fa-magnifying-glass {
+.icons {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.icons  i {
   padding-right: 20px;
 }
 
 .fa-bars {
-  visibility: hidden;
+  display: none !important;
 }
 
 .menu {
@@ -60,15 +67,14 @@ header {
 
 @media screen and (max-width: 800px) {
   .fa-bars {
-    visibility: visible;
-    padding-left: 20px;
+    display: block !important;
+    /* padding-left: 20px; */
   }
 
   .menu {
-    visibility: hidden;
+    display: none !important;
   }
 }
-
 
 /* BANNER */
 
@@ -101,20 +107,20 @@ header {
 }
 
 #tech {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   color: #fff;
 }
 
 #primavera {
-  font-size: 30px;
-  color:#ccc
+  font-size: 1.875rem;
+  color: #ccc;
 }
 
 #digital {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: italic;
-  color: #fff
+  color: #fff;
 }
 
 #button-info {
@@ -130,7 +136,7 @@ header {
 
 #button-info:hover {
   background-color: #c8c8c8;
-  color: #252525
+  color: #252525;
 }
 
 @media screen and (max-width: 1100px) {
@@ -149,136 +155,132 @@ header {
   }
 
   #tech {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
-  
+
   #primavera {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
-  
+
   #digital {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: italic;
-    color: #fff
+    color: #fff;
   }
-
 }
-
 
 /* MISSÃO */
 
 .mission {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 150%;
 }
 
 .img-mission {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .mission-paragraph {
-    text-align: justify;
+  text-align: justify;
 }
 .mission-subtitle {
-    color: #252525;
-    font-weight: 700;
-    text-align: justify;
+  color: #252525;
+  font-weight: 700;
+  text-align: justify;
 }
 
 .mission-text {
-    color: #7d7d7d;
-    margin: 10px;
-    text-align: justify;
+  color: #7d7d7d;
+  margin: 10px;
+  text-align: justify;
 }
 
 .mission-link {
-    color: #0075be;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
-    text-align: left;
+  color: #0075be;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  text-align: left;
 }
 
 .mission-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
-    .mission {
-        display: flex;
-        flex-direction: column;
-    }
+  .mission {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .img-mission {
-        margin-bottom: 20px;
-    }
+  .img-mission {
+    margin-bottom: 20px;
+  }
 }
-
 
 /* EQUIPA */
 
 .name {
-    font-size: 125%;
+  font-size: 1.25rem;
 }
 
 .team {
-    text-align: center;
+  text-align: center;
 }
 
 .img1 {
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .img1 .img-team {
-    width: 300px; 
-    height: auto;
-    display: flex;
+  width: 300px;
+  height: auto;
+  display: flex;
 }
-  
+
 .img1 .name-job {
-    align-items: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    opacity: 0;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
 }
-  
+
 .img1:hover {
   border-radius: 0;
 }
-  
+
 .img1:hover .name-job {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
-    .team {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .img1 {
-        margin-bottom: 20px;
-    }
+  .img1 {
+    margin-bottom: 20px;
+  }
 }
-  
 
 /* OFERTA FORMATIVA */
 
@@ -287,144 +289,143 @@ header {
 }
 
 .slider {
-    width: 100%;
-    margin-bottom: 50px;
-    position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
 }
 
 .slider-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.title, .sub-title, .text { 
-    text-align: center;
-    line-height: 130%;
+.title,
+.sub-title,
+.text {
+  text-align: center;
+  line-height: 130%;
 }
 
 .title {
   color: #f27f29;
-  font-size: 2.65em;
+  font-size: 2.625rem;
   font-weight: 700;
 }
 
 .sub-title {
   color: #153c85;
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 700;
 }
 
 .text {
-  font-size: 26px;
+  font-size: 1.625rem;
   color: #153c85;
-  margin-top: 20px;;
-}
-
-
-/* ASIDE */
-
-#contact {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  bottom: 20%;
-  right: 0;
-  cursor: pointer;
-}
-
-#phone-container {
-  background-color: #252525;
-}
-
-#phone {
-  padding: 15px;
-  margin: 0;
-}
-
-#phone::before {
-  background-color: #252525;
-}
-
-#phone-number {
-  background-color: #252525;
-  color: #0acb84;
-  padding: 18.5px;
-  display: none;
-  margin: 0;
-}
-
-#phone-container:hover + #phone-number {
-  display: block;
-}
-
-#top {
-  position: fixed;
-  text-align: right;
-  bottom: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 480px) {  /* 412px foi a resoluão maior que encontrei para um smartphone usando device toolbar no Dev Tools*/
-  #contact, #top {
-    display: none;
-  }
-
-    /* Smartphones (portrait and landscape) ----------- encontrei este bloco de código para concretizar media queries para smartphones
-    @media only screen
-    and (min-device-width : 320px)
-    and (max-device-width : 480px) {
-    }
-
-    Smartphones (landscape) -----------
-    @media only screen
-    and (min-width : 321px) {
-    }
-
-    Smartphones (portrait) -----------
-    @media only screen
-    and (max-width : 320px) {
-    } */
-} 
-
-/* FOOTER */
-
-footer {
-  background-color: #ebebeb;
-  justify-content: center;
-  padding: 20px;
-  line-height: 150%;
-}
-
-.footer-heading {
-  color: #252525;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.footer-ul {
-  flex-basis: 20%;
-  cursor: pointer;
-}
-
-.footer-link {
-  color: #7d7d7d;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 800px) {
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+  /* ASIDE */
+
+  #contact {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 20%;
+    right: 0;
+    cursor: pointer;
+  }
+
+  #phone-container {
+    background-color: #252525;
+  }
+
+  #phone {
+    padding: 15px;
+    margin: 0;
+  }
+
+  #phone::before {
+    background-color: #252525;
+  }
+
+  #phone-number {
+    background-color: #252525;
+    color: #0acb84;
+    padding: 18.5px;
+    display: none;
+    margin: 0;
+  }
+
+  #phone-container:hover + #phone-number {
+    display: block;
+  }
+
+  #top {
+    position: fixed;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 400px) {
+    #contact,
+    #top {
+      display: none;
+    }
+  }
+
+  /* FOOTER */
+
   footer {
-    justify-content: flex-start;
+    background-color: #ebebeb;
+    justify-content: center;
+    padding: 20px;
+    line-height: 150%;
+  }
+
+  .footer-heading {
+    color: #252525;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 
   .footer-ul {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 20%;
+    cursor: pointer;
   }
-}
+
+  .footer-link {
+    color: #7d7d7d;
+  }
+
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 800px) {
+    footer {
+      justify-content: flex-start;
+    }
+
+    .footer-ul {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
