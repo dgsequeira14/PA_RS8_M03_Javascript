@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Datas</title>
 </head>
+
 <body>
     <script>
-        let hoje=new Date();
+        let hoje = new Date();
+        console.log(hoje); // Mon May 22 2023 22:25:22 GMT+0100 (Hora de verão da Europa Ocidental)
+        // epoch - 1 de Janeiro de 1970
+        // número de milissegundos desde o epoch
+        let ms = Date.now();
+        console.log(ms); // 1684790695405
+
+        let passado = new Date(0);
+        console.log(passado); // Thu Jan 01 1970 01:00:00 GMT+0100 (Hora padrão da Europa Ocidental)
+
+        let passado2 = new Date(-121314356458734);
+        console.log(passado2); // Thu Sep 13 -1875 15:02:16 GMT-0036 (Hora de verão da Europa Ocidental)
+
+        let decadaAnterior = new Date(2015, 08, 12, 17, 30, 10, 100);
+        console.log(decadaAnterior); // Sat Sep 12 2015 17:30:10 GMT+0100 (Hora de verão da Europa Ocidental)
+
+        let decadaAnterior2 = new Date("2015-08-12 17:30:10"); // data ISO
+        console.log(decadaAnterior2); // Wed Aug 12 2015 17:30:10 GMT+0100 (Hora de verão da Europa Ocidental)
+
+        console.log("Dia do mês:" + hoje.getDate()); // 22
+        hoje.setFullYear("2500"); // Sat May 22 2500 22:29:28 GMT+0100 (Hora de verão da Europa Ocidental)
         console.log(hoje);
 
-        let ms=Date.now()
-        console.log(ms);
+        console.log("#" + hoje.toLocaleString());
+        console.log("#" + hoje.toLocaleString("fr"));
+        console.log("#" + hoje.toLocaleString("en-US"));
 
-        let passado= new Date(0);
-        console.log(passado);
+        // criar uma função que recebe uma data no formato YYYY/MM/DD que mostra o nome do mês
+
+        function mostraMesExtenso(mes) {
+            // switch (mes) {
+            //     case 0:
+            //         return "Janeiro";
+            //         break;
+            //     case 7:
+            //         return "Agosto";
+            //         break;
+            //     default:
+            //         return "";
+            //         break;
+            // }
+            // return nomeMes;
+            let meses=["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            return meses[mes];
+        }
+
+        function mostraDiaSemana(dia) {
+            let diaDaSemana=["Domingo","Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+            return diaDaSemana[dia];
+        }
+        
+        
+        function dataPorExtenso(data) {
+            let mes=mostraMesExtenso(data.getMonth()); 
+            let diaSemana=mostraDiaSemana(data.getDay());
+            let dia=data.getDate();
+            let ano=data.getFullYear();
+            let dataPorExtenso=`${diaSemana}, ${dia} de ${mes} de ${ano}`; 
+            return dataPorExtenso;
+        }
+        console.log(dataPorExtenso(new Date("2023-05-23 17:30:10")));
+
+        const novaData=new Date();
+        let localeData=new Intl.DateTimeFormat("pt").format(novaData);
+        console.log(localeData);
+
+        const novaData2=new Date();
+        let localeData2=new Intl.DateTimeFormat("pt", {dateStyle: "full", timeStyle: 'short'}).format(novaData);
+        console.log(localeData2);
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Moment Date Library</title>
+</head>
+
+<body>
+    <script src="../moment.js"></script>
+    <script src="../moment-with-locales.js"></script>
+    <script>
+        moment.locale('pt');
+        console.log(moment.locale); // retorna o objeto que contém a data corrente e outra informação
+
+        console.log(moment().format('dddd, D [de] MMMM [de] YYYY, HH:mm:ss'));
+    </script>
+</body>
+
+</html>

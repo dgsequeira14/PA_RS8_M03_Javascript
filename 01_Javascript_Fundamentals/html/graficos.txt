@@ -1,0 +1,33 @@
+HTML / CSS
+    Formatos bitmap
+        GIF
+        JPEG
+        PNG - APNG
+    Desenhar
+        Gradientes 
+    Transformar - CSS transform
+        2D e 3D
+    Animar
+        CSS Transitions
+        CSS Animations
+    Libraries
+        Animate.css (https://animate.style/)                
+
+JavaScript
+    Interação com CSS e com as propriedades de transformação e am«nimação
+    Animação
+        Timers - setTimout, setInterval
+    Canvas
+        Programar gráficos
+    Libraries
+        jQuery - método animate()
+        GSAP - GreenSock Animation Platform
+        Anime.js
+
+SVG - formato vectorial
+    Desenhar
+    Transformar
+    Animar
+        SMIL
+        JavaScript
+    Libraries          

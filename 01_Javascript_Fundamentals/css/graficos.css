@@ -1,0 +1,31 @@
+.poligono {
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+}
+
+#rectangulo {
+  width: 200px;
+}
+
+#circulo {
+  border-radius: 50%;
+}
+
+#oval {
+  border-radius: 50%;
+  width: 200px;
+}
+
+#triangulo {
+    border-left: 50px solid green;
+    border-right: none;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-radius: 20px 0 0 0;
+    top: -12px;
+    left:-9px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+}
