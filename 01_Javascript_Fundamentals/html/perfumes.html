@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes</title>
+    <link rel="stylesheet" href="../css/perfumes.css">
+</head>
+<body>
+    <h2>Gestao de perfumes</h2>
+    <form id="formInserePerfume">
+        <p><label for="marca">Marca:</label> <input type="text" id="marca"></p>
+        <p><label for="nome">Nome:</label> <input type="text" id="nome"></p>
+        <p><label for="preco">Preço:</label> <input type="number" id="preco"></p>
+        <p><input type="checkbox" id="destaque" value="S"><label for="destaque">Destaque</label></p>
+        <p><input type="button" id="btInserePerfume" value="Insere Perfume"></p>
+    </form>
+    <section id="listaPerfumes">
+        <p><label for="pesquisa">Pesquisa:</label> <input type="text" id="pesquisa"> <input type="button" id="btPesquisa" value="Pesquisar"><input type="button" id="btLimpaPesquisa" value="Limpa pesquisa"></p>
+        <p>Pesquisar por:<input type="radio" id="rmarca" name="filtro" value="marca"><label for="rmarca">Marca</label><input type="radio" id="rnome" name="filtro" value="nome"> <label for="rnome">Nome</label></p>
+        
+        <p>Preço limite: 0<input type="range" min="0" max="1000" step="100" id="precoMaximo"><span id="valorMaximo"></span></p> 
+        
+        <table id="tabelaDados">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Destaque</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">Total de perfumes: <span id="total"></span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <script src="../JS/perfumes.js"></script>
+</body>
+</html>

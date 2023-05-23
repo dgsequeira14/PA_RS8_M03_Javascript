@@ -4,16 +4,29 @@
       "id": 1,
       "marca": "Devota & Lomba",
       "nome": "Mar de Rosas",
-      "preco": 11.9,
+      "preco": 11.90,
       "destaque": false
     },
-
     {
       "id": 2,
       "marca": "Clarins",
       "nome": "My Clarins Removam Leite Micelar",
       "preco": 10.94,
       "destaque": true
+    },
+    {
+      "marca": "AAAA",
+      "nome": "BBBB",
+      "preco": 6.00,
+      "destaque": true,
+      "id": 3
+    },
+    {
+      "marca": "Channel",
+      "nome": "Nº 5",
+      "preco": 500,
+      "destaque": true,
+      "id": 4
     }
   ]
 }
