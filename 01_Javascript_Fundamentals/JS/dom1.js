@@ -18,7 +18,6 @@ document.querySelectorAll
 console.log(document.getElementsByTagName("h1"));
 // devolve <h1>Teste de DOM</h1>
 console.log(document.getElementsByTagName("h1")[0]);
-
 // devolve "Teste de DOM"
 console.log(document.getElementsByTagName("h1")[0].textContent);
 document.getElementsByTagName("h1")[0].textContent = "Outro texto";
